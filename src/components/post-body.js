@@ -12,8 +12,7 @@ export class PostBody extends LitElement {
 
   constructor() {
     super();
-    this.body =
-      'hello may name is nakul niroula iam from ilam iam currently working as a ASE at leapfrog tecgnologies nepal.';
+    this.body ='';
   }
 
   render() {

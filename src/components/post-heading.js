@@ -16,7 +16,7 @@ export class PostHeading extends LitElement {
 
   constructor() {
     super();
-    this.heading = 'How do we add containers to the projects';
+    this.heading = '';
   }
 
   render() {

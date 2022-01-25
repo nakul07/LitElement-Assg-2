@@ -15,8 +15,8 @@ export class postDetails extends LitElement {
 
   constructor() {
     super();
-    this.date = 'January 25, 2022';
-    this.time = '1:24 PM';
+    this.date = '';
+    this.time = '';
   }
 
   render() {

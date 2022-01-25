@@ -56,7 +56,7 @@ export class AnswerCount extends LitElement {
     super();
 
     this.name = 'Answers';
-    this.count = 8;
+    this.count = 0;
   }
 
   render() {

@@ -73,18 +73,20 @@ export class MyApp extends LitElement {
       `,
     ];
   }
+
   render() {
     return html`
     <main>
       <div class = 'container'>
-       <answer-count></answer-count>
+       <answer-count count = "8"></answer-count>
        <profile-image imageSrc="../images/random.jpeg" profileName="Nakul Niroula"></profile-image>
-        <post-details></post-details>
+        <post-details date="January 25, 2022" time="1:24 PM"></post-details>
       <div>
   
       <div class="content">
-        <post-heading></post-heading>
-       <post-body></post-body>
+        <post-heading heading="How do we add containers to the projects"></post-heading>
+       <post-body body="hello may name is nakul niroula iam from ilam iam currently working as a ASE at leapfrog tecgnologies nepal.
+       "></post-body>
       <div>
       <hr>
       <hash-tag hashTag=" ACS"></hash-tag><hash-tag hashTag=" Assays"></hash-tag>

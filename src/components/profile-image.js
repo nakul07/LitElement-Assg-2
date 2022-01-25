@@ -10,7 +10,6 @@ export class ProfileImage extends LitElement {
   }
   static get styles() {
     return css`
-      
       img {
         border-radius: 50%;
         height: 60px;
@@ -25,7 +24,6 @@ export class ProfileImage extends LitElement {
         display: table-cell;
         vertical-align: middle;
       }
-
     `;
   }
 
