@@ -14,10 +14,9 @@ import { styleMap } from 'lit-html/directives/style-map.js';
  * @slot - This element has a slot
  * @csspart button - The button
  */
-export class TestComponent extends LitElement {
+export class AnswerCount extends LitElement {
   static get styles() {
     return css`
-      
       p {
         background-color: green;
         border-radius: 2px;
@@ -65,4 +64,4 @@ export class TestComponent extends LitElement {
   }
 }
 
-customElements.define('test-component', TestComponent);
+customElements.define('answer-count', AnswerCount);

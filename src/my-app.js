@@ -6,7 +6,7 @@
 
 import { LitElement, html, css } from 'lit';
 
-import './components/test-component';
+import './components/answer-count';
 import './components/profile-image';
 import './components/post-details';
 import './components/post-heading';
@@ -36,7 +36,7 @@ export class MyApp extends LitElement {
           margin: 20px;
           border: 1px solid black;
         }
-        test-component {
+        answer-count {
           top: 25px;
           position: absolute;
         }
@@ -77,7 +77,7 @@ export class MyApp extends LitElement {
     return html`
     <main>
       <div class = 'container'>
-       <test-component></test-component>
+       <answer-count></answer-count>
        <profile-image imageSrc="../images/random.jpeg" profileName="Nakul Niroula"></profile-image>
         <post-details></post-details>
       <div>
