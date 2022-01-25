@@ -4,7 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import { LitElement, html, css } from 'lit';
+import { LitElement, html, css, render } from 'lit';
+import { styleMap } from 'lit-html/directives/style-map.js';
 
 /**
  * An example test element.
@@ -16,11 +17,20 @@ import { LitElement, html, css } from 'lit';
 export class TestComponent extends LitElement {
   static get styles() {
     return css`
-      :host {
-        display: block;
-        border: solid 1px gray;
-        padding: 16px;
-        max-width: 800px;
+      
+      p {
+        background-color: green;
+        border-radius: 2px;
+        font-size: 20;
+        text-align: center;
+        width: 70px;
+        height: 60px;
+        padding: 1px;
+        color: white;
+        margin: 30px;
+      }
+      span {
+        font-size: 30px;
       }
     `;
   }
@@ -46,33 +56,12 @@ export class TestComponent extends LitElement {
   constructor() {
     super();
 
-    this.name = 'World';
-    this.count = 0;
+    this.name = 'Answers';
+    this.count = 8;
   }
 
   render() {
-    return html`
-      <h1>${this.sayHello(this.name)}!</h1>
-      <button @click=${this._onClick} part="button">
-        Click Count: ${this.count}
-      </button>
-      <slot></slot>
-    `;
-  }
-
-  _onClick() {
-    this.count++;
-    this.dispatchEvent(new CustomEvent('count-changed'));
-  }
-
-  /**
-   * Formats a greeting.
-   *
-   * @param name {string} The name to say "Hello" to.
-   * @returns {string} A greeting directed at `name`.
-   */
-  sayHello(name) {
-    return `Hello, ${name}, Lets Learn LitElement`;
+    return html` <p><span>${this.count}</span><br />${this.name}</p> `;
   }
 }
 
