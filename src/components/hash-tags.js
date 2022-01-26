@@ -1,12 +1,22 @@
 import { LitElement, html, css, render } from 'lit';
 import { styleMap } from 'lit-html/directives/style-map.js';
 
+/**
+ * hash-tag element
+ */
 export class HashTags extends LitElement {
+  /**
+   * Get properties
+   */
   static get properties() {
     return {
       hashTag: { type: String },
     };
   }
+
+  /**
+   * Get styles
+   */
   static get styles() {
     return css`
       div {
@@ -21,11 +31,20 @@ export class HashTags extends LitElement {
       }
     `;
   }
+
+  /**
+   * Constructor function
+   */
   constructor() {
     super();
     this.hashTag = '';
   }
 
+  /**
+   * Renders html
+   *
+   * @returns {Array}
+   */
   render() {
     return html`
       <div>

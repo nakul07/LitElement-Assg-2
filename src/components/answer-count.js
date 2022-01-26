@@ -8,11 +8,7 @@ import { LitElement, html, css, render } from 'lit';
 import { styleMap } from 'lit-html/directives/style-map.js';
 
 /**
- * An example test element.
- *
- * @fires count-changed - Indicates when the count changes
- * @slot - This element has a slot
- * @csspart button - The button
+ * Renders the no. of answer
  */
 export class AnswerCount extends LitElement {
   static get styles() {
@@ -37,14 +33,7 @@ export class AnswerCount extends LitElement {
   static get properties() {
     return {
       /**
-       * The name to say "Hello" to.
-       *
-       * @type {string}
-       */
-      name: { type: String },
-
-      /**
-       * The number of times the button has been clicked.
+       * The number of answers
        *
        * @type {number}
        */
@@ -52,6 +41,9 @@ export class AnswerCount extends LitElement {
     };
   }
 
+  /**
+   * Constructor function
+   */
   constructor() {
     super();
 
@@ -59,6 +51,11 @@ export class AnswerCount extends LitElement {
     this.count = 0;
   }
 
+  /**
+   * Renders html
+   * 
+   * @returns {html}
+   */
   render() {
     return html` <p><span>${this.count}</span><br />${this.name}</p> `;
   }

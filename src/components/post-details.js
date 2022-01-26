@@ -5,7 +5,13 @@ let styles = {
   fontWeight: '600',
 };
 
+/**
+ * An element for post details
+ */
 export class postDetails extends LitElement {
+  /**
+   * Get properties
+   */
   static get properties() {
     return {
       date: { type: String },
@@ -13,12 +19,20 @@ export class postDetails extends LitElement {
     };
   }
 
+  /**
+   * Constructor function
+   */
   constructor() {
     super();
     this.date = '';
     this.time = '';
   }
 
+  /**
+   * Renders html
+   *
+   * @returns {Array}
+   */
   render() {
     return html`
       <div>

@@ -1,11 +1,21 @@
 import { LitElement, html, css, render } from 'lit';
 
+/**
+ * flag icon element
+ */
 export class FlagIcon extends LitElement {
+  /**
+   * Get properties
+   */
   static get properties() {
     return {
       src: { type: String },
     };
   }
+
+  /**
+   * Get styles
+   */
   static get styles() {
     return css`
       img {
@@ -14,11 +24,20 @@ export class FlagIcon extends LitElement {
       }
     `;
   }
+
+  /**
+   * Constructor
+   */
   constructor() {
     super();
     this.src = '';
   }
 
+  /**
+   * Renders html
+   *
+   * @returns {Array}
+   */
   render() {
     return html`
       <div>

@@ -1,13 +1,23 @@
 import { LitElement, html, css, render } from 'lit';
 import { styleMap } from 'lit-html/directives/style-map.js';
 
+/**
+ * An image element
+ */
 export class ProfileImage extends LitElement {
+  /**
+   * Get properties
+   */
   static get properties() {
     return {
       imageSrc: { type: String },
       profileName: { type: String },
     };
   }
+
+  /**
+   * Get styles
+   */
   static get styles() {
     return css`
       img {
@@ -27,12 +37,20 @@ export class ProfileImage extends LitElement {
     `;
   }
 
+  /**
+   * Constructor function
+   */
   constructor() {
     super();
     this.imageSrc = '';
     this.profileName = '';
   }
 
+  /**
+   * Renders html
+   *
+   * @returns {Array}
+   */
   render() {
     return html`
       <div class="wrapper">

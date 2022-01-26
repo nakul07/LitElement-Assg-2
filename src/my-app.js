@@ -13,12 +13,9 @@ import './components/post-heading';
 import './components/post-body';
 import './components/hash-tags';
 import './components/flag-icon';
+
 /**
- * An example element.
- *
- * @fires count-changed - Indicates when the count changes
- * @slot - This element has a slot
- * @csspart button - The button
+ * main app element.
  */
 export class MyApp extends LitElement {
   /**
@@ -74,6 +71,11 @@ export class MyApp extends LitElement {
     ];
   }
 
+  /**
+   * Renders html
+   *
+   * @returns {Array}
+   */
   render() {
     return html`
     <main>
